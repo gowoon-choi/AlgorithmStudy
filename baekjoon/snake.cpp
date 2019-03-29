@@ -39,6 +39,7 @@ struct Game{
     Board board;
     int time;
     bool isEnded;
+    bool isFinal;
 };
 
 Game changeBoard(Game game, bool isApple){
@@ -80,11 +81,12 @@ Game move(Game game, char direction, int step){
                 game = changeBoard(game,isApple);
             }
             //머리 방향 바꿔주기
-            if(direction == 'L'){
-                game.snake.direction = 'N';
-            }
-            else if(direction == 'D'){
-                game.snake.direction = 'S';
+            if(!game.isFinal) {
+                if (direction == 'L') {
+                    game.snake.direction = 'N';
+                } else if (direction == 'D') {
+                    game.snake.direction = 'S';
+                }
             }
             break;
         case 'W':
@@ -111,11 +113,12 @@ Game move(Game game, char direction, int step){
                 game = changeBoard(game,isApple);
             }
             //머리 방향 바꿔주기
-            if(direction == 'L'){
-                game.snake.direction = 'S';
-            }
-            else if(direction == 'D'){
-                game.snake.direction ='N';
+            if(!game.isFinal) {
+                if (direction == 'L') {
+                    game.snake.direction = 'S';
+                } else if (direction == 'D') {
+                    game.snake.direction = 'N';
+                }
             }
             break;
         case 'S':
@@ -142,11 +145,12 @@ Game move(Game game, char direction, int step){
                 game = changeBoard(game,isApple);
             }
             //머리 방향 바꿔주기
-            if(direction == 'L'){
-                game.snake.direction = 'E';
-            }
-            else if(direction == 'D'){
-                game.snake.direction ='W';
+            if(!game.isFinal) {
+                if (direction == 'L') {
+                    game.snake.direction = 'E';
+                } else if (direction == 'D') {
+                    game.snake.direction = 'W';
+                }
             }
             break;
         case 'N':
@@ -173,11 +177,13 @@ Game move(Game game, char direction, int step){
                 game = changeBoard(game,isApple);
             }
             //머리 방향 바꿔주기
-            if(direction == 'L'){
-                game.snake.direction = 'W';
-            }
-            else if(direction == 'D'){
-                game.snake.direction ='E';
+            if(!game.isFinal){
+                if(direction == 'L'){
+                    game.snake.direction = 'W';
+                }
+                else if(direction == 'D'){
+                    game.snake.direction ='E';
+                }
             }
             break;
     }
@@ -204,11 +210,16 @@ int main(){
 
     Snake snake = Snake();
     Board board = Board(size,apple);
-    Game game{snake, board, 0, false};
+    Game game{snake, board, 0, false, false};
 
     for(int i=0;i<instruct_num;i++){
         game = move(game,instruction[i].second,instruction[i].first - game.time);
         if(game.isEnded) break;
     }
-    cout << endl << game.time;
+    game.isFinal = true;
+    while(true){
+        if(game.isEnded) break;
+        game = move(game,game.snake.direction,1);
+    }
+    cout << game.time;
 }
