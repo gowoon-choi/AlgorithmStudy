@@ -2,8 +2,9 @@
 
 - ## index
 
-1. [baekjoon] #13506 카멜레온부분문자열 <fail>
+1. [baekjoon] #13506 카멜레온부분문자열
 https://www.acmicpc.net/problem/13506
+< Fail >
 2. [baekjoon] #2294 동전2
 https://www.acmicpc.net/problem/2294
 3. [kakao] 다트게임
@@ -18,3 +19,4 @@ https://algospot.com/judge/problem/read/MATCHORDER
 https://www.acmicpc.net/problem/1759
 8. [baekjoon] #3190 뱀
 https://www.acmicpc.net/problem/3190
+< Fail >
