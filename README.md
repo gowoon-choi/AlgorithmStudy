@@ -1,8 +1,8 @@
 # AlgorithmStudy
 
-1. [baekjoon] #13506 카멜레온부분문자열 fail
+1. [baekjoon] #13506 카멜레온부분문자열 <fail>
 https://www.acmicpc.net/problem/13506
-2. [baekjoon] #2294 동전2 
+2. [baekjoon] #2294 동전2
 https://www.acmicpc.net/problem/2294
 3. [kakao] 다트게임
 http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/
