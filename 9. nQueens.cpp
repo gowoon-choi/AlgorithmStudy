@@ -1,7 +1,7 @@
 /*
  * baekjoon #1405
- * crazyRobot.cpp
- * 2019.07.09
+ * nQueens.cpp
+ * 2019.07.17
  * 최고운 github.com/choigone
  */
 
