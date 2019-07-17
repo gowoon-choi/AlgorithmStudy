@@ -1,5 +1,5 @@
 /*
- * baekjoon #1405
+ * baekjoon #9663
  * nQueens.cpp
  * 2019.07.17
  * 최고운 github.com/choigone
