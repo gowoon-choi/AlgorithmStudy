@@ -23,3 +23,6 @@ https://www.acmicpc.net/problem/3190
 9. [baekjoon] #9663 N-Queen
 https://www.acmicpc.net/problem/9663
 < Fail - 시간초과 >
+10. [baekjoon] #2252 줄세우기
+https://www.acmicpc.net/problem/2252
+< Fail - 시간초과 >
