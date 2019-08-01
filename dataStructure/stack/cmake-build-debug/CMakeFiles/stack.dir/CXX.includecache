@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main2.cpp
+iostream
+-
+stack
+-
+
