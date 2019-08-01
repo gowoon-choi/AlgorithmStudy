@@ -57,27 +57,27 @@ include CMakeFiles/stack.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/stack.dir/flags.make
 
-CMakeFiles/stack.dir/main2.cpp.o: CMakeFiles/stack.dir/flags.make
-CMakeFiles/stack.dir/main2.cpp.o: ../main2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stack.dir/main2.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stack.dir/main2.cpp.o -c /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main2.cpp
+CMakeFiles/stack.dir/main3.cpp.o: CMakeFiles/stack.dir/flags.make
+CMakeFiles/stack.dir/main3.cpp.o: ../main3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/stack.dir/main3.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stack.dir/main3.cpp.o -c /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main3.cpp
 
-CMakeFiles/stack.dir/main2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stack.dir/main2.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main2.cpp > CMakeFiles/stack.dir/main2.cpp.i
+CMakeFiles/stack.dir/main3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stack.dir/main3.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main3.cpp > CMakeFiles/stack.dir/main3.cpp.i
 
-CMakeFiles/stack.dir/main2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stack.dir/main2.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main2.cpp -o CMakeFiles/stack.dir/main2.cpp.s
+CMakeFiles/stack.dir/main3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stack.dir/main3.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main3.cpp -o CMakeFiles/stack.dir/main3.cpp.s
 
 # Object files for target stack
 stack_OBJECTS = \
-"CMakeFiles/stack.dir/main2.cpp.o"
+"CMakeFiles/stack.dir/main3.cpp.o"
 
 # External object files for target stack
 stack_EXTERNAL_OBJECTS =
 
-stack: CMakeFiles/stack.dir/main2.cpp.o
+stack: CMakeFiles/stack.dir/main3.cpp.o
 stack: CMakeFiles/stack.dir/build.make
 stack: CMakeFiles/stack.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable stack"

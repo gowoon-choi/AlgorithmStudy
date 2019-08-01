@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main2.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main3.cpp">
 			<Option target="stack"/>
 		</Unit>
 		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/CMakeLists.txt">

@@ -3,4 +3,4 @@ project(stack)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(stack main2.cpp)
+add_executable(stack main3.cpp)
