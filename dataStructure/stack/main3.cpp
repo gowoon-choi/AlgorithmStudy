@@ -39,6 +39,7 @@ public:
             return false;
         }
         else{
+            stack[index] = NULL;
             index--;
         }
     }
