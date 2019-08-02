@@ -1,5 +1,5 @@
 /*
- * stack class 구현해서 사용
+ * stack 구현 by C++
  */
 
 #include <iostream>

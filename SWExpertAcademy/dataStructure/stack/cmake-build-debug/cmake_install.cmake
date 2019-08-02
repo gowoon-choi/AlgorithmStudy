@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack
+# Install script for directory: /Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/stack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/stack/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

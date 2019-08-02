@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/main3.cpp" "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/dataStructure/stack/cmake-build-debug/CMakeFiles/stack.dir/main3.cpp.o"
+  "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/stack/main3.cpp" "/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/stack/cmake-build-debug/CMakeFiles/stack.dir/main3.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
