@@ -2,21 +2,53 @@
  * queue 구현 by C
  */
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 #define MAX 100
 
-int front;
-int rear;
+int front; // dequeue index
+int rear; // enqueue index
 int queue[MAX];
 
-int isEmpty(){
+void init(){
+    front = 0;
+    rear = 0;
+}
 
+int isEmpty(){
+    return (front == rear);
 }
 
 int isFull(){
-
+    return ((rear+1)%MAX == front);
 }
+
+int enqueue(int value){
+    if(isFull()){
+        cout << "queue is full";
+        return -1;
+    }
+    else{
+        queue[rear] = value;
+        rear = (rear+1)%MAX;
+        return 0;
+    }
+}
+
+int dequeue(){
+    if(isEmpty()){
+        cout << "queue is empty";
+        return -1;
+    }
+    else{
+        int result = queue[front];
+        front = (front+1)%MAX;
+        return result;
+    }
+}
+
+
 
 int main() {
     int testCase, size, value;
@@ -26,10 +58,10 @@ int main() {
         init();
         for(int j=0;j<size;j++){
             cin >> value;
-            push(value);
+            enqueue(value);
         }
         for(int j=0;j<size;j++){
-            cout << pop() << " ";
+            cout << dequeue() << " ";
         }
         cout << endl;
     }

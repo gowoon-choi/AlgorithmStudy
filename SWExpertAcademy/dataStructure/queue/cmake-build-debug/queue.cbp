@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/queue/main.cpp">
+		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/queue/main2.cpp">
 			<Option target="queue"/>
 		</Unit>
 		<Unit filename="/Users/gounchoi/Desktop/공부하는최고운/AlgorithmStudy/SWExpertAcademy/dataStructure/queue/CMakeLists.txt">
