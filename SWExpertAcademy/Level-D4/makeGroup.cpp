@@ -19,20 +19,23 @@ int main(){
     for(int i=0;i<testCase;i++){
         cin >> n >> k;
         result = 0;
-        if(n%2==0){
-            result = 1+(n*k);
-            result = result * (n/2);
+        if(n!=k){
+            if(n%2==0){
+                result = 1+(n*k);
+                result = result * (n/2);
+            }
+            else{
+                result = 1 + ((n*k)-k+1);
+                result = (result * (n/2)) + (result/2);
+            }
+            answer.push_back(result);
+        }
+        cout << "#" << i+1;
+        if(n==k){
+            for(int j=0;j<k;j++) cout << " " << j+1;
         }
         else{
-            result = 1 + ((n*k)-k+1);
-            result = (result * (n/2)) + (result/2);
-        }
-        answer.push_back(result);
-    }
-    for(int i=0;i<testCase;i++){
-        cout << "#" << i+1;
-        for(int j=0;j<k;j++){
-            cout << " " << result;
+            for(int j=0;j<k;j++) cout << " " << answer[i];
         }
     }
     return 0;
