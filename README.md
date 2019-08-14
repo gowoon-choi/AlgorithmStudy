@@ -18,6 +18,6 @@ https://www.acmicpc.net/problem/9663
 https://www.acmicpc.net/problem/2252
 < Fail - 시간초과 >
 
-[swExpert] #3752 줄세우기
+[swExpert] #3752 가능한시험점수
 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWHPkqBqAEsDFAUn&categoryId=AWHPkqBqAEsDFAUn&categoryType=CODE
 < Fail - 시간초과 / 런타임에러 >
