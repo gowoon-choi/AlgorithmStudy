@@ -11,7 +11,6 @@
 
 using namespace std;
 
-//TODO DP로 풀어보자
 int possibleScore(vector<int> score){
     int temp;
     vector<int> scores;
@@ -31,24 +30,21 @@ int possibleScore(vector<int> score){
 int main(){
     int testCase;
     int count;
-    int temp,temp2;
-
+    int temp;
     vector<int> score;
-    score.push_back(0);
+    vector<int> result;
     cin >> testCase;
     for(int i=0;i<testCase;i++){
         cin >> count;
         for(int j = 0; j<count;j++){
             cin >> temp;
-            temp2 = score.size();
             score.push_back(temp);
-            for(int j=0;j<temp2;j++){
-                score.push_back(score[j]+temp);
-            }
         }
-        cout << "#" << i+1 << " " << possibleScore(score) << endl;
+        result.push_back(possibleScore(score));
         score.clear();
     }
-
+    for(int i=0;i<result.size();i++) cout << "#" << i+1 << " " << result[i] << endl;
+    
     return 0;
 }
+
