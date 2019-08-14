@@ -17,3 +17,7 @@ https://www.acmicpc.net/problem/9663
 [baekjoon] #2252 줄세우기
 https://www.acmicpc.net/problem/2252
 < Fail - 시간초과 >
+
+[swExpert] #3752 줄세우기
+https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWHPkqBqAEsDFAUn&categoryId=AWHPkqBqAEsDFAUn&categoryType=CODE
+< Fail - 시간초과 / 런타임에러 >
