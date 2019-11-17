@@ -7,8 +7,6 @@
 
 #include <iostream>
 
-#define N 10001
-
 using namespace std;
 
 int main(){
