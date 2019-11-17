@@ -1,13 +1,11 @@
 /*
- * baekjoon #2751 수 정렬하기3
+ * baekjoon #10898 수 정렬하기3
  * BO10989.cpp
  * 2019.11.16
  * 최고운 github.com/choigone
  */
 
 #include <iostream>
-
-#define N 10001
 
 using namespace std;
 
