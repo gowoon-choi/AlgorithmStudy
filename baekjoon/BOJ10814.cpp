@@ -1,7 +1,7 @@
 /*
- * baekjoon #10814 
- * BOJ1260.cpp
- * 2019.10.28
+ * baekjoon #10814 나이순 정렬
+ * BOJ10814.cpp
+ * 2019.11.17
  * 최고운 github.com/choigone
  */
 
