@@ -9,6 +9,7 @@
 #include <vector>
 #include <algorithm>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -22,10 +23,7 @@ void bfs(vector<vector<int>> graph ,int node){
     while(!q.empty()){
         cout << q.front() << " ";
         for(int i=0; i<graph[q.front()].size();i++){
-            if(visited[graph[q.front()][i]] == true){
-                continue;
-            }
-            else{
+            if(visited[graph[q.front()][i]] == false){
                 q.push(graph[q.front()][i]);
                 visited[graph[q.front()][i]] = true;
             }
@@ -35,13 +33,39 @@ void bfs(vector<vector<int>> graph ,int node){
 }
 
 // using recursion
-void dfs1(vector<vector<int>> graph , int node){
-
+// vector call by reference
+void dfs1(vector<vector<int>> graph , int node, vector<bool> &visited){
+    cout << node << " ";
+    visited[node] = true;
+    for(int i=0; i<graph[node].size(); i++){
+        if(visited[graph[node][i]] == false){
+            dfs1(graph,graph[node][i],visited);
+        }
+    }
 }
 
 // using stack
 void dfs2(vector<vector<int>> graph ,int node){
+    vector<bool> visited(graph.size(),false);
+    stack<int> s;
 
+    cout << node << " ";
+    visited[node] = true;
+    s.push(node);
+    while(!s.empty()){
+        int cur = s.top();
+        s.pop();
+        for(int i=0; i<graph[cur].size(); i++){
+            int next = graph[cur][i];
+            if(visited[next] == false){
+                cout << next << " ";
+                visited[next] = true;
+                s.push(cur);
+                s.push(next);
+                break;
+            }
+        }
+    }
 }
 
 int main(){
@@ -60,9 +84,14 @@ int main(){
         sort(graph[i+1].begin(),graph[i+1].end());
     }
 
+    vector<bool> visited(graph.size(),false);
+    dfs1(graph,first,visited);
+
+    dfs2(graph,first);
+
+    cout<< endl;
+
     bfs(graph,first);
-    //dfs1(graph,first);
-    //dfs2(graph,first);
 
     return 0;
 }
