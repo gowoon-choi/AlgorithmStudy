@@ -19,16 +19,10 @@ int solution(string s){
         string result = "";
         int j;
         for(j=0; j<=s.length()-i; j+=i){
-            if(s.substr(j,i) == s.substr(j+i,i)){
-                count++;
-            }
+            if(s.substr(j,i) == s.substr(j+i,i)) count++;
             else{
-                if(count == 1){
-                    result+=s.substr(j,i);
-                }
-                else{
-                    result+=(to_string(count)+s.substr(j,i));
-                }
+                if(count == 1) result+=s.substr(j,i);
+                else result+=(to_string(count)+s.substr(j,i));
                 count = 1;
             }
         }
