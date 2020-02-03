@@ -1,6 +1,6 @@
 /*
  * 2020 카카오공채 문자열 압축
- * 200116.cpp
+ * stringCompression.cpp
  * 2020.01.16
  * 최고운 github.com/choigone
  */
