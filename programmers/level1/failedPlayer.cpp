@@ -1,6 +1,6 @@
 /*
  * programmers 완주하지 못 한 선수
- * 200207-lv1.cpp
+ * failedPlayer.cpp
  * 2020.02.07
  * github.com/choigone
  */
