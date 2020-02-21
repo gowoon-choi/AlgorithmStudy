@@ -1,6 +1,6 @@
 /*
- * programmers 모의고사
- * 200212-lv1.cpp
+ * programmers mockTest
+ * mockTest.cpp
  * 2020.02.12
  * github.com/choigone
  */
