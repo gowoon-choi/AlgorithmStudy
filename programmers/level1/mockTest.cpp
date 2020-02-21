@@ -1,5 +1,5 @@
 /*
- * programmers mockTest
+ * programmers 
  * mockTest.cpp
  * 2020.02.12
  * github.com/choigone
