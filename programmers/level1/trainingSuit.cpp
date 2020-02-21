@@ -1,6 +1,6 @@
 /*
- * Programmers 체육
- * 200221.cpp
+ * Programmers 체육복
+ * trainingSuit.cpp
  * 2020.02.21
  * github.com/choigone
  */
