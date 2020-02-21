@@ -1,6 +1,6 @@
 /*
- * Programmers level1 바이러스
- * 200218-lv1.cpp
+ * Programmers 바이러스
+ * virus.cpp
  * 2020.02.18
  * github.com/choigone
  */
