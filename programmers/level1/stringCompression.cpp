@@ -1,6 +1,6 @@
 /*
  * programmers 문자열 압축
- * 200116-lv1.cpp
+ * stringCompression.cpp
  * 2020.01.16
  * 최고운 github.com/choigone
  */
