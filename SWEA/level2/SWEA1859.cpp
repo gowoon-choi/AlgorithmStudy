@@ -22,7 +22,6 @@ int main(){
 
         int target = arr[n-1];
         long long result = 0;
-        // function
         for(int j=n-2; j>=0 ; j--){
             if(arr[j] < target){
                 result+=(target - arr[j]);
