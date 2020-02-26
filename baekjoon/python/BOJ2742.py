@@ -1,6 +1,6 @@
 """
-baekjoon #2742 N찍기
-BOJ2742.py
+baekjoon #2741 N찍기
+BOJ2741.py
 2020.02.26
 최고운 github.com/choigone
 """
