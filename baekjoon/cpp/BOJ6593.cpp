@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -17,8 +18,14 @@ int dz[6] = {0,0,0,0,1,-1};
 
 class Point{
 public:
-    int x; int y; int z;
+    int x; int y; int z; int d;
     Point(){}
+    Point(int x, int y, int z, int d){
+        this->x = x;
+        this->y = y;
+        this->z = z;
+        this->d = d;
+    }
     bool isOut(int xMax, int yMax, int zMax){
         if(x < 0 || y < 0 || z < 0) return true;
         else if(x >= xMax || y >= yMax || z >= zMax) return true;
@@ -26,28 +33,28 @@ public:
     }
 };
 
-pair<bool,int> bfs(vector<vector<string>> building, int a, int b, int c, Point start, int n){
-    int count = n;
-    Point next;
-    pair<bool,int> result;
-    for(int i=0; i<6; i++){
-        next.x = start.x+dx[i];
-        next.y = start.y+dy[i];
-        next.z = start.z+dz[i];
-        if(!next.isOut(b,c,a)){
-            if(building[next.z][next.x][next.y] == 'E'){
-                return make_pair(true,count);
-            }
-            if(building[next.z][next.x][next.y] == '.'){
-                building[next.z][next.x][next.y] = 'v';
-                result = bfs(building, a, b, c, next, count+1);
-                if(result.first == true){
-                    return result;
+int bfs(vector<vector<string>> building, int a, int b, int c, Point start){
+    start.d = 0;
+    queue<Point> q;
+    q.push(start);
+    Point cur, next;
+    while(!q.empty()){
+        cur = q.front();
+        for(int i=0; i<6; i++){
+            next = Point(cur.x+dx[i],cur.y+dy[i],cur.z+dz[i],cur.d+1);
+            if(!next.isOut(b,c,a)){
+                if(building[next.z][next.x][next.y] == 'E'){
+                    return next.d;
+                }
+                if(building[next.z][next.x][next.y] == '.'){
+                    q.push(next);
+                    building[next.z][next.x][next.y] = 'v';
                 }
             }
         }
+        q.pop();
     }
-    return make_pair(false,count);
+    return -1;
 }
 
 int main(){
@@ -60,11 +67,11 @@ int main(){
         cin >> a >> b >> c;
         if(a+b+c == 0) break;
         building.clear();
-        for(int ia=0; ia<a; ia++){
+        for(int ia=0; ia<a; ia++) {
             row.clear();
-            for(int ib=0; ib<b; ib++){
+            for (int ib = 0; ib < b; ib++) {
                 cin >> line;
-                if(line.find("S") != string::npos){
+                if (line.find("S") != string::npos) {
                     start.x = ib;
                     start.y = line.find("S");
                     start.z = ia;
@@ -73,9 +80,9 @@ int main(){
             }
             building.push_back(row);
         }
-        pair<bool,int> result = bfs(building, a, b, c, start, 0);
-        if(!result.first) cout << "Trapped!" << endl;
-        else cout << "Escaped in " << result.second+1 << " minute(s)." << endl;
+        int result = bfs(building, a, b, c, start);
+        if(result == -1) cout << "Trapped!" << endl;
+        else cout << "Escaped in " << result << " minute(s)." << endl;
     }
     return 0;
 }
