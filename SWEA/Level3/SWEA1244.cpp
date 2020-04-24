@@ -1,6 +1,6 @@
 /*
  * SWEA #1244 최대상금
- * SWEA2344.cpp
+ * SWEA1244.cpp
  * 2020.04.24
  * github.com/choigone
  */
