@@ -4,8 +4,8 @@
  * programmers 조이스틱
  */
 
-public class Solution {
-    public static int solution(String name) {
+class Solution {
+    public int solution(String name) {
         int alphaChanged = 0;
         int maxA = 0;
         int countA = 0;
@@ -44,13 +44,10 @@ public class Solution {
             if(name.charAt(name.length()-i) == 'A') rightA++;
             else break;
         }
-        if(maxA <= distance){
-            if(leftA > rightA){ return name.length()-leftA-1; }
-            else{ return name.length()-rightA-1+alphaChanged; }
-        }
+        int bigger = rightA;
+        if(leftA > rightA) bigger = leftA;
+        if(maxA <= distance){ return name.length()-bigger-1+alphaChanged; }
         else{
-            int bigger = rightA;
-            if(leftA > rightA) bigger = leftA;
             if(maxA-distance < bigger) return name.length()-bigger-1+alphaChanged;
             return (distance*2)+((name.length()-1)-(distance+maxA))+alphaChanged;
         }
