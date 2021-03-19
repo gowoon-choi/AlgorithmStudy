@@ -1,3 +1,9 @@
+/*
+ * 2021.03.18
+ * gowoon-choi/github.com
+ * programmers 징검다리
+ */
+
 import java.util.Arrays;
 
 class Solution {
