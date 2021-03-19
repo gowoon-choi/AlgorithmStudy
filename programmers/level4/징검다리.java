@@ -1,4 +1,4 @@
-mport java.util.Arrays;
+import java.util.Arrays;
 
 class Solution {
     public int solution(int distance, int[] rocks, int n) {
