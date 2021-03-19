@@ -2,7 +2,7 @@ mport java.util.Arrays;
 
 class Solution {
     public int solution(int distance, int[] rocks, int n) {
-       Arrays.sort(rocks);
+        Arrays.sort(rocks);
         int[] subDistances = new int[rocks.length+1];
         subDistances[0]=rocks[0];
         subDistances[rocks.length]=distance-rocks[rocks.length-1];
