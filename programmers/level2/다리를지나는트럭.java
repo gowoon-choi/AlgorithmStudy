@@ -29,12 +29,12 @@ public class Solution {
             }
             else i--;
             for (int j = 0; j < onBridge.size() ; j++) {
-                if (onBridge.get(j).time + 1 == bridge_length){
+                onBridge.get(j).time++;
+                if (onBridge.get(j).time == bridge_length){
                     current -= onBridge.get(j).weight;
                     onBridge.remove(j);
                     j--;
                 }
-                else onBridge.get(j).time++;
             }
             answer++;
         }
