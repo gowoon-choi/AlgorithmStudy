@@ -1,6 +1,14 @@
+/*
+ * 2021.04.27
+ * gowoon-choi/github.com
+ * programmers 다리를 지나는 트럭
+ */
+
+package com.gowoon;
+
 import java.util.Vector;
 
-class Solution {
+public class Solution {
     public static class Truck{
         int weight;
         int time;
@@ -10,7 +18,7 @@ class Solution {
         }
     }
 
-    public int solution(int bridge_length, int weight, int[] truck_weights) {
+    public static int solution(int bridge_length, int weight, int[] truck_weights) {
         int answer = 1;
         int current = 0;
         Vector<Truck> onBridge = new Vector<>();
@@ -18,7 +26,7 @@ class Solution {
             if (onBridge.isEmpty() || current + truck_weights[i] <= weight){
                 onBridge.add(new Truck(truck_weights[i]));
                 current += truck_weights[i];
-            } 
+            }
             else i--;
             for (int j = 0; j < onBridge.size() ; j++) {
                 if (onBridge.get(j).time + 1 == bridge_length){
