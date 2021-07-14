@@ -14,7 +14,7 @@ public class UnionFindOpt {
 
     int find(int x){
         if(root[x] == x) return x;
-        else return root[x] = find(x);
+        else return root[x] = find(root[x]);
     }
 
     void union(int x, int y){
