@@ -25,10 +25,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // reader
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); // writer
-        StringTokenizer st = new StringTokenizer(br.readLine()); // tokenizer
-        n = Integer.parseInt(st.nextToken());
-        st = new StringTokenizer(br.readLine());
-        m = Integer.parseInt(st.nextToken());
+        StringTokenizer st; // tokenizer
+        n = Integer.parseInt(br.readLine());
+        m = Integer.parseInt(br.readLine());
         tree = new int[n];
         height = new int[n];
         for(int i=0; i<n; i++){
