@@ -5,7 +5,7 @@ class Solution {
     
     public long solution(int price, int money, int count) {
         long result = (sumTo(count)*price) - money;
-        if(result < 0) return -0;
+        if(result < 0) return 0;
         else return result;
     }
 }
