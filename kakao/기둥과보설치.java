@@ -1,73 +1,96 @@
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Arrays;
 
 class Solution {
     public static class Way{
-        private boolean right;
         private boolean top;
+        private boolean right;
         Way(){
-            this.right = false;
-            this.top = false;
+            top = false;
+            right = false;
         }
-        public void right(){
-            this.right = !this.right;
+        public void buildTop(){
+            top = true;
         }
-        public void top(){
-            this.top = !this.top;
+        public void deleteTop(){
+            top = false;
+        }
+        public void buildRight(){
+            right = true;
+        }
+        public void deleteRight(){
+            right = false;
         }
     }
 
-    public static boolean isPossible(Way[][] board, int x, int y, int object) {
-        if(object == 0){
-            if(x == 0) return true;
-            if((y!=0 && board[x][y-1].right) || board[x][y].right) return true;
-            if(board[x-1][y].top) return true;
-        }
-        else{
-            if(board[x-1][y].top || board[x-1][y+1].top) return true;
-            if(board[x][y-1].right && board[x][y].right) return true;
-        }
+    public static boolean isPossibleTop(Way[][] map, int x, int y){
+        if(y==0) return true;
+        if(x>0 && map[x-1][y].right) return true;
+        if(map[x][y].right) return true;
+        if(map[x][y-1].top) return true;
         return false;
     }
 
-    public static void operator(Way[][] board, int x, int y, int object){
-        if(object == 0){
-            board[x][y].top();
-            if(!isPossible(board, x, y, object)) board[x][y].top();
-        }
-        else{
-            board[x][y].right();
-            if(!isPossible(board, x, y, object)) board[x][y].right();
-        }
+    public static boolean isPossibleRight(Way[][] map, int x, int y){
+        if(y>0 && map[x][y-1].top) return true;
+        if(y>0 && map[x+1][y-1].top) return true;
+        if((x>0 && map[x-1][y].right) && (x<map.length-1 && map[x+1][y].right)) return true;
+        return false;
     }
-    
+
+    public static boolean checkAll(Way[][] map){
+        for(int i=0; i<map.length; i++){
+            for(int j=0; j<map.length; j++){
+                if(map[i][j].top && !isPossibleTop(map, i, j)) return false;
+                if(map[i][j].right && !isPossibleRight(map, i, j)) return false;
+            }
+        }
+        return true;
+    }
+
     public int[][] solution(int n, int[][] build_frame) {
-        Way[][] board = new Way[n+1][n+1];
-        for(int i=0; i<=n; i++){
-            for(int j=0; j<=n; j++){
-                board[i][j] = new Way();
+        Way[][] map = new Way[n+1][n+1];
+        for(int i=0; i<n+1; i++){
+            for(int j=0; j<n+1; j++){
+                map[i][j] = new Way();
             }
         }
+
         for(int[] frame : build_frame){
-            operator(board, frame[1], frame[0], frame[2]);
-        }
-        ArrayList<int[]> answerList = new ArrayList<>();
-        for(int i=0; i<=n; i++){
-            for(int j=0; j<=n; j++){
-                if(board[i][j].top) answerList.add(new int[]{j, i, 0});
-                if(board[i][j].right) answerList.add(new int[]{j, i, 1});
-            }
-        }
-        answerList.sort(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if(o1[0] == o2[0]){
-                    if(o1[1] == o2[1]) return o1[2]-o2[2];
-                    else return o1[1]-o2[1];
+            if(frame[3] == 0) {
+                if(frame[2] == 0){
+                    map[frame[0]][frame[1]].deleteTop();
+                    if(!checkAll(map)) map[frame[0]][frame[1]].buildTop();
                 }
-                else return o1[0] - o2[0];
+                else{
+                    map[frame[0]][frame[1]].deleteRight();
+                    if(!checkAll(map)) map[frame[0]][frame[1]].buildRight();
+                }
             }
+            else {
+                if(frame[2] == 0){
+                    if(isPossibleTop(map, frame[0], frame[1])) map[frame[0]][frame[1]].buildTop();
+                }
+                else{
+                    if(isPossibleRight(map, frame[0], frame[1])) map[frame[0]][frame[1]].buildRight();
+                }
+            }
+        }
+
+        ArrayList<int[]> answer = new ArrayList<>();
+        for(int i=0; i<n+1; i++){
+            for(int j=0; j<n+1; j++){
+                if(map[i][j].top) answer.add(new int[]{i, j, 0});
+                if(map[i][j].right) answer.add(new int[]{i, j, 1});
+            }
+        }
+        answer.sort((o1, o2) -> {
+            if(o1[0] == o2[0]){
+                if(o1[1] == o2[1]) return o1[2]-o2[2];
+                else return o1[1]-o2[1];
+            }
+            else return o1[0] - o2[0];
         });
-        return answerList.toArray(new int[answerList.size()][3]);
+        return answer.toArray(new int[answer.size()][3]);
     }
 }
